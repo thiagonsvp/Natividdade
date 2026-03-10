@@ -1,0 +1,297 @@
+:root {
+  --bg: #030922;
+  --panel: #121f3f;
+  --panel-2: #0d1632;
+  --line: #22345f;
+  --text: #e6eeff;
+  --muted: #7890c2;
+  --accent: #5865f2;
+  --danger: #ff4d7a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid #172449;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.brand-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #151f4a;
+  display: grid;
+  place-items: center;
+}
+
+.brand span {
+  display: block;
+  color: #6583d6;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.menu {
+  display: grid;
+  gap: 8px;
+}
+
+.menu-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.menu-item.active {
+  color: #b6c7ff;
+  background: #17244b;
+  border-color: #283f73;
+}
+
+.sidebar-footer {
+  display: grid;
+  gap: 14px;
+}
+
+.theme-chip {
+  background: #111b39;
+  color: #b7c8f9;
+  border: 1px solid #263b70;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.user-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: #1f2c58;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.user-box small {
+  color: var(--muted);
+}
+
+.content {
+  padding: 20px 28px;
+}
+
+.content-header h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+.content-header p {
+  margin: 6px 0 18px;
+  color: var(--muted);
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.metric {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.metric small {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.metric h2 {
+  margin: 10px 0 2px;
+  font-size: 46px;
+  color: #6f7aff;
+}
+
+.metric.alert h2 {
+  color: var(--danger);
+}
+
+.grid-2 {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.panel {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.panel-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+input,
+select,
+button {
+  border-radius: 10px;
+  border: 1px solid #324b82;
+  background: #0f1a39;
+  color: #dbe7ff;
+  padding: 10px;
+}
+
+button {
+  background: #2e4cbf;
+  cursor: pointer;
+}
+
+.form-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.form-inline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.list,
+.list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  border-bottom: 1px solid #1f2f5a;
+  padding: 10px 0;
+}
+
+.item-title {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.item-sub {
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.dot {
+  color: var(--danger);
+  margin-right: 8px;
+}
+
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.column {
+  background: #101c3c;
+  border: 1px solid #263a6b;
+  border-radius: 12px;
+  padding: 10px;
+  min-height: 240px;
+}
+
+.deal {
+  background: #1a2b57;
+  border: 1px solid #334f95;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  background: #21397a;
+  color: #b6c8ff;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #172449;
+  }
+  .metrics,
+  .grid-2,
+  .kanban,
+  .cols-3,
+  .form-inline {
+    grid-template-columns: 1fr;
+  }
+}
